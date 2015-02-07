@@ -1,0 +1,115 @@
+/*
+ *  File :    _layout/menu.less
+ *  Info :    Layout for navigation element.
+ *  Usage :   @import "_layout/menu.less";
+ *
+ */
+
+
+#menu {
+	height: 100%;
+	position: absolute;
+	width: 70%;
+	z-index: 100;
+	-webkit-transform: translate(-100%, 0);
+	-ms-transform: translate(-100%, 0);
+	transform: translate(-100%, 0);
+	-webkit-transition: .5s ease-out;
+	transition: .5s ease-out;
+
+	.menu-button {
+		cursor: pointer;
+		display: block;
+		height: 40px;
+		left: 100%;
+		position: absolute;
+		top: 10px;
+		width: 50px;
+		-webkit-transition: background-color 250ms ease-out;
+		transition: background-color 250ms ease-out;
+
+		span,
+		span:before,
+		span:after {
+			background-color: @colour-light;
+			left: 20px;
+			pointer-events: none;
+		  border-radius: 1px;
+		  content: '';
+		  cursor: pointer;
+		  display: block;
+		  height: 3px;
+		  position: absolute;
+		  -webkit-transition: transform 500ms ease-out, background-color 500ms ease-out, top 500ms ease-out;
+		  transition: transform 500ms ease-out, background-color 500ms ease-out, top 500ms ease-out;
+		  width: 20px;
+		}
+
+		span {
+			top: 19px;
+		}
+		span:before {
+		  top: -6px;
+		  left: 0;
+		}
+		span:after {
+		  top: 6px;
+		  left: 0;
+		}
+
+		&:hover {
+
+			span,
+			span:before,
+			span:after {}
+		}
+	}
+
+	&.expand {
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+
+		.menu-button {
+
+			span {
+			  background-color: transparent;
+
+			  &:before,
+				&:after {
+				  top: 0;
+				}
+				&:before {
+
+					-webkit-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+				  transform: rotate(45deg);
+				}
+				&:after {
+					-webkit-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+				  transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	.inner {
+		// margin: 0 auto;
+		// max-width: 1024px;
+		// overflow: hidden;
+
+
+		li {
+			display: inline-block;
+		}
+
+		.nav {
+			// float: right;
+
+			li {
+				margin: 0 0 0 20px;
+			}
+		}	
+	}
+}

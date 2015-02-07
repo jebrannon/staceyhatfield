@@ -1,0 +1,46 @@
+/*
+ *  File :    _layout/body.less
+ *  Info :    Layout for the body of the website.
+ *  Usage :   @import "_layout/body.less";
+ *
+ */
+
+
+#body {
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	width: 100%;
+
+	&.collapse {
+		-webkit-transition: all 500ms ease-out;
+		transition: all 500ms ease-out;
+		-webkit-transform: translate(20%, 0);
+		-ms-transform: translate(20%, 0);
+		transform: translate(20%, 0);
+		transition: all 500ms ease-out;
+
+		.collapse-overlay {
+			opacity: .75;
+			pointer-events: auto;
+		}
+	}
+
+	.collapse-overlay {
+		height: 100%;
+		pointer-events: none;
+		-webkit-transition: opacity 500ms ease-out;
+		transition: opacity 500ms ease-out;
+		background-color: @colour-dark;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
