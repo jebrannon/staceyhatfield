@@ -5,20 +5,46 @@
  *
  */
 
+ .font-face('icomoon', '/fonts/', 'icomoon');
 
 .theme {
 	.font-size(1.2);
 	.line-height(1.6);
-	font-family: 'Cantarell', sans-serif;
+	font-family: 'Vollkorn', serif;
 	font-weight: 100;
-
-	h2 {
-		.font-size(1.6);
-		.line-height(2.0);
-		font-weight: 100;
-	}
 
 	a {
 		text-decoration: none;
 	}
+
+	.icon {
+		.font-size(1.6);
+		.line-height(1.6);
+		font-family: 'icomoon', sans-serif;
+
+		&.tw {
+			.font-size(1.8);
+			.line-height(1.8);
+		}
+	}
+
+	.logo {
+		.font-size(2.6);
+		.line-height(2.6);
+		font-weight: 100;
+	}
+
+	.sub-header {
+		.font-size(1.5);
+		.line-height(1.5);
+		font-weight: 100;
+	}
+
+	.min-width(@small, {
+		
+		.logo {
+			.font-size(3.2);
+			.line-height(3.2);
+		}
+	});
 }

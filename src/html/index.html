@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-ng-app='ngApp' data-ng-controller="PageController" ng-init="init()">
     <head>
-        <title>James Brannon // Digital Creative</title>
+        <title>Stacey Hatfield</title>
         <meta charset="utf-8">
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
 
@@ -11,13 +11,13 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="images/favicon.ico" />
 
-        <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
-
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
 
         <!-- Main Stylesheet -->
         <link href="css/main.css" rel="stylesheet" type="text/css" />
     </head>
-    <body class="theme">
+    <body class="theme home">
         <noscript>
             <div class="no-script">
                 <p>For full functionality of this site it is necessary to enable JavaScript.</p>
@@ -36,14 +36,26 @@
           <a class="menu-button" href="#"><span></span></a>
         </div>
 
-        <div id="body" class="theme" data-ng-body>
-            <div id="header">
-              <img class="ident" src="/images/ident.svg"/></br>
-              <a class="email" href="mailto:me@jamesbrannon.co.uk" title="me@jamesbrannon.co.uk">me@jamesbrannon.co.uk</a>
+        <div id="body" data-ng-body>
+            <div id="header" class="section" data-ng-header>
+                <div class="top-menu">
+                    <h1 class="logo"><a data-target="home" class="logo-link" href="/">Stacey Hatfield</a></h1>
+                    <div class="ident"></div>
+                    <ul class="nav">
+                        <li class="nav-item"><a class="sub-header nav-link" data-target="portfolio" href="#/portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="sub-header nav-link" data-target="stories" href="#/stories">Stories</a></li>
+                        <li class="nav-item"><a class="sub-header nav-link" data-target="projects" href="#/projects">Projects</a></li>
+                        <li class="nav-item"><a class="sub-header nav-link" data-target="blog" href="#/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <ul class="quick-contact">
+                    <li class="quick-contact-item"><a class="icon tw" href="#">o</a></li>
+                    <li class="quick-contact-item"><a class="icon em" href="#">a</a></li>
+                </ul>
             </div>
-            <div class="feed-module" data-ng-feed></div>
+            <!-- <div class="feed-module" data-ng-feed></div> -->
 
-            <div class="collapse-overlay theme"></div>
+            <div class="collapse-overlay"></div>
         </div>
 
         <script src="js/libs-min.js" type="text/javascript"></script>

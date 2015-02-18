@@ -6,27 +6,104 @@
  */
 
 .theme {
-	background-color: @colour-dark;
-	color: @colour-light;
+	background-color: @colour-light;
+	color: @colour-dark;
 
 	a {
-		color: @colour-light;
+		color: @colour-dark;
+	}
 
-		&:hover {
-			color: @colour-accent;
+	.logo {
+		.logo-link:hover {
+			color: @colour-dark;
+		}
+	}
+
+	.nav {
+
+		[data-target='portfolio']:hover {
+			color: @colour-portfolio;
+		}
+
+		[data-target='stories']:hover {
+			color: @colour-stories;
+		}
+
+		[data-target='projects']:hover {
+			color: @colour-projects;
+		}
+
+		[data-target='blog']:hover {
+			color: @colour-blog;
+		}
+	}
+
+	&.home,
+	.home {
+
+		a:hover {
+			color: @colour-home;
+		}
+
+		.ident {
+			background-color: @colour-home;
+		}
+	}
+
+	&.portfolio,
+	.portfolio {
+
+		a:hover {
+			color: @colour-portfolio;
+		}
+
+		.ident {
+			background-color: @colour-portfolio;
+		}
+	}
+
+	&.stories,
+	.stories {
+
+		a:hover {
+			color: @colour-stories;
+		}
+
+		.ident {
+			background-color: @colour-stories;
+		}
+	}
+
+	&.projects,
+	.projects {
+
+		a:hover {
+			color: @colour-projects;
+		}
+
+		.ident {
+			background-color: @colour-projects;
+		}
+	}
+
+	&.blog,
+	.blog {
+
+		a:hover {
+			color: @colour-blog;
+		}
+
+		.ident {
+			background-color: @colour-blog;
 		}
 	}
 
 	.invert {
-		background-color: @colour-light;
-		color: @colour-dark;
+		background-color: @colour-dark;
+		color: @colour-light;
 
 		a {
-			color: @colour-dark;
-
-			&:hover {
-				color: @colour-accent;
-			}
+			color: @colour-light;
 		}
 	}
 }

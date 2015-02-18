@@ -7,19 +7,65 @@
 
 
 #header {
-	padding: 60px;
-	text-align: center;
-
-	.ident {
-		width: 300px;
-		height: 300px;
-	}
-
-	.email {
-		margin-top: 20px;
-	}
 
 	* {
 		display: inline-block;
+	}
+
+	&.section {
+		display: table;
+
+		.min-width(@medium, {
+			padding-top: 30px;
+		});
+	}
+
+
+	.top-menu,
+	.quick-contact {
+		display: table-cell;
+	}
+
+	.top-menu {
+		padding-left: 33px;
+
+		.logo {
+			.user-select(none);
+			cursor: pointer;
+		}
+
+		.ident {
+			.border-radius(6px);
+			display: none;
+			height: 6px;
+			margin: 0 15px;
+			width: 6px;
+		}
+
+		.nav {
+			.user-select(none);
+			display: none;
+
+			.nav-item {
+				margin: 0 15px 0 0;
+			}
+		}
+
+		.min-width(@small, {
+			padding: 0;
+
+			.ident,
+			.nav {
+				display: inline-block;
+			}
+		});
+	}
+
+	.quick-contact {
+		text-align: right;
+
+		.quick-contact-item {
+			margin: 0 0 0 15px;
+		}
 	}
 }

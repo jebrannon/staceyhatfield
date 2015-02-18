@@ -21,12 +21,9 @@ var MenuDirective = function ($window, $sce) {
 						break;
 				}
 			};
-			var _handleDataResponse = function() {
-				console.log('_handleDataResponse');
-			};
 
 
-			elem.on('click', _handleEvent);
+			
 
 			/*
 			  Methods
@@ -39,7 +36,7 @@ var MenuDirective = function ($window, $sce) {
 		  /*
 		  	Event Listeners
 		  */
-			// scope.$on('ng_update', _handleEvent);
+			elem.on('click', _handleEvent);
 		}
   };
 };

@@ -1,0 +1,12 @@
+/*
+ *  File :    _mixins/media-queries.less
+ *  Info :    Here we define mixins specifically for handling cross browser CSS.
+ *  Usage :   @import "_mixins/media-queries.less";
+ *
+ */
+
+.min-width(@width; @content) {
+	@media only screen and (min-width : @width) {
+		@content();
+	}
+}

@@ -42,6 +42,11 @@ module.exports = {
 		release: release + '/images',
 		src: src + 'images/**'
 	},
+	fonts: {
+		dev: develop + '/fonts',
+		release: release + '/fonts',
+		src: src + 'fonts/**'
+	},
 	server: {
 		dev: {
 			dir: develop,

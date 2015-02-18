@@ -1,0 +1,80 @@
+/*
+ *  File :    _mixins/cross-browser.less
+ *  Info :    Here we define mixins specifically for handling cross browser CSS.
+ *  Usage :   @import "_mixins/cross-browser.less";
+ *
+ */
+
+
+/* Inline Block */
+.inline-block(){
+	display:-moz-inline-stack;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+
+/*
+ *  .background-svg('svg-image-file', 'fallback-image-file');
+ */
+.background-svg(@svg, @fallback) {
+	background-image: url(@fallback);
+    background-image: url(@svg), none;
+}
+
+
+/*
+ *  .box-shadow('properties');
+ */
+.box-shadow(@properties) {
+	-moz-box-shadow: @properties;
+	-webkit-box-shadow: @properties;
+	box-shadow: @properties;
+}
+
+
+/*
+ *  .border-radius('params');
+ */
+.border-radius(@params) {
+	-moz-border-radius: @params;
+	-webkit-border-radius: @params;
+	border-radius: @params;
+}
+
+
+/*
+ *  .user-select('param');
+ */
+.user-select(@param) {
+	-moz-user-select: @param;
+	-ms-user-select: @param;
+	-o-user-select: @param;
+	-webkit-user-select: @param;
+	user-select: @param;
+}
+
+
+/*
+ *  .transition('params');
+ */
+.transition(@params) {
+  -moz-transition: @params;   
+  -ms-transition: @params;   
+  -o-transition: @params;   
+  -webkit-transition: @params;   
+  transition: @params; 
+}
+
+
+/*
+ *  .flip-element-y();
+ */
+.flip-element-y() {
+	-moz-transform: scaleY(-1);
+	-ms-filter: "FlipV";
+	-o-transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+	filter: FlipV;
+	transform: scaleY(-1);
+}
