@@ -6,23 +6,6 @@
  */
 
 
-/* Inline Block */
-.inline-block(){
-	display:-moz-inline-stack;
-	display:inline-block;
-	*display:inline;
-	zoom:1;
-}
-
-/*
- *  .background-svg('svg-image-file', 'fallback-image-file');
- */
-.background-svg(@svg, @fallback) {
-	background-image: url(@fallback);
-    background-image: url(@svg), none;
-}
-
-
 /*
  *  .box-shadow('properties');
  */
@@ -56,16 +39,42 @@
 
 
 /*
+ *  .transform('params');
+ */
+.transform(@params) {
+	-webkit-transform: @params;
+	-ms-transform: @params; 
+	transform: @params;
+}
+
+
+/*
  *  .transition('params');
  */
 .transition(@params) {
-  -moz-transition: @params;   
-  -ms-transition: @params;   
-  -o-transition: @params;   
-  -webkit-transition: @params;   
-  transition: @params; 
+	-webkit-transition: @params;
+	transition: @params;
 }
 
+
+/*
+ *  .inline-block()
+ */
+.inline-block() {
+	display:-moz-inline-stack;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+
+
+/*
+ *  .background-svg('svg-image-file', 'fallback-image-file');
+ */
+.background-svg(@svg, @fallback) {
+	background-image: url(@fallback);
+    background-image: url(@svg), none;
+}
 
 /*
  *  .flip-element-y();
